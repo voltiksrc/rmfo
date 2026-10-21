@@ -29,5 +29,23 @@ Created recipe template for: tree in packages/tree/package.toml using: cmake
 The actual information inside each package template needs to be filled out and
 needs to be tested with the latest version of omi before submitting it to omi-inventory.
 
+# Install
+```bash
+git clone https://github.com/voltiksrc/rmfo.git
+```
+```bash
+cd rmfo
+```
+```bash
+meson setup build
+```
+```bash
+meson compile -C build
+```
+```bash
+sudo meson install -C build
+```
+
 # Status
 It can make a basic template for now.
+
