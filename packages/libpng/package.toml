@@ -1,0 +1,10 @@
+[package]
+name = "libpng"
+version = ""
+
+[source]
+url = ""
+sha256 = ""
+
+[build]
+system = "cmake"

@@ -1,0 +1,10 @@
+[package]
+name = "libjpeg-turbo"
+version = ""
+
+[source]
+url = ""
+sha256 = ""
+
+[build]
+system = "meson"
