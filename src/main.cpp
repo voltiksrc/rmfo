@@ -26,10 +26,16 @@ int main(int argc, char *argv[]) {
         std::cout << "Options:\n";
         std::cout << "  --cmake  Set a package build system to cmake\n";
         std::cout << "  --meson  Set a package build system to meson\n";
+        std::cout << "  --go     Set a package build system to go\n";
+        std::cout << "  --cargo  Set a package build system to cargo\n";
+        std::cout << "  --waf    Set a package build system to waf\n";
         return 0;
     }
     bool use_cmake = false;
     bool use_meson = false;
+    bool use_go = false;
+    bool use_cargo = false;
+    bool use_waf = false;
 
     for (int i = 2; i < argc; i++) {
         string arg = argv[i];
@@ -38,6 +44,12 @@ int main(int argc, char *argv[]) {
             use_cmake = true;
         } else if (arg == "--meson") {
             use_meson = true;
+        } else if (arg == "--go") {
+            use_go = true;
+        } else if (arg == "--cargo") {
+            use_cargo = true;
+        } else if (arg == "--waf") {
+            use_waf = true;
         } else {
             std::cerr << "Unknown option: " << arg << '\n';
             std::cout << "Use: rmfo --help for more options.\n";
@@ -71,7 +83,16 @@ int main(int argc, char *argv[]) {
     } else if (use_meson && use_cmake) {
         std::cerr<<"Cannot select both meson and cmake.\n";
         return 1;
-    } 
+    } else if (use_go) {
+        build_system = "go";
+    } else if (use_cargo) {
+        build_system = "cargo";
+    } else if (use_go && use_cargo) {
+        std::cerr<<"Cannot select both go and cargo.\n";
+        return 1;
+    } else if (use_waf) {
+        build_system = "waf";
+    }
 
     if (packagefile.is_open()) {
         packagefile << "[package]\n";
