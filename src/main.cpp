@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
         std::cout << "rmfo <package-name>\n";
         std::cout << "rmfo <package-name> --cmake\n";
         std::cout << "rmfo <package-name> --meson\n";
-        std::cout << "rmfo --help or -h";
+        std::cout << "rmfo --help or -h\n";
         std::cout << "Options:\n";
         std::cout << "  --cmake  Set a package build system to cmake\n";
         std::cout << "  --meson  Set a package build system to meson\n";
