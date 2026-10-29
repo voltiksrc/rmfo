@@ -104,7 +104,11 @@ int main(int argc, char *argv[]) {
         packagefile << "sha256 = \"\"\n\n";
 
         packagefile << "[build]\n";
-        packagefile << "system = \"" << build_system << "\"\n";
+        packagefile << "system = \"" << build_system << "\"\n\n";
+
+        packagefile << "[deps]\n";
+        packagefile << "requires = []\n";
+        packagefile << "build_requires = []";
     }
 
     std::cout<<"Created recipe template for: "<<packagename<<" in "<<pkgdir.c_str()<<"/package.toml"<<" using: "<<build_system<<'\n';
