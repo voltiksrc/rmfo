@@ -1,5 +1,5 @@
 # rmfo
-Rmfo is a tool that makes recipe templates for the omi package manager.
+Rmfo is a tool that makes recipe templates for the Synnical system manager.
 
 # Usage
 ```bash
@@ -27,7 +27,7 @@ Created recipe template for: tree in packages/tree/package.toml using: cmake
 
 # About Usage
 The actual information inside each package template needs to be filled out and
-needs to be tested with the latest version of omi before submitting it to omi-inventory.
+needs to be tested with the latest version of Synnical before submitting it to the repo.
 
 # Install
 ```bash

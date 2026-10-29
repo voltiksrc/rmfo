@@ -5,7 +5,7 @@
 
 using std::string;
 
-// A tool to make recipe formats/templates for the omi package manager
+// A tool to make recipe formats/templates for the Synnical system manager
 
 namespace fs = std::filesystem;
 
